@@ -21,12 +21,12 @@ const choices = {
     0: ["1", "2", "3", "5", "2"],
     1: ["Paris", "London", "Berlin", "Madrid", "Paris"],
     2: ["Earth", "Jupiter", "Mars", "Venus", "Jupiter"],
-    3: ["H2O", "O2", "CO2", "H2O2", "H20"],
+    3: ["H2O", "O2", "CO2", "H2O2", "H2O"],
     4: ["6", "7", "8", "9", "8"],
     5: ["Harper Lee", "Mark Twain", "J.K. Rowling", "Ernest Hemingway", "Harper Lee"],
     6: ["Cheetah", "Lion", "Tiger", "Leopard", "Cheetah"],
     7: ["100°C", "0°C", "50°C", "200°C", "100°C"],
-    8: ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean", "Pacific"],
+    8: ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean", "Pacific Ocean"],
     9: [ "Pablo Picasso","Leonardo da Vinci", "Vincent van Gogh", "Claude Monet", "Leonardo da Vinci"],
 };
 
@@ -59,16 +59,19 @@ function addQuestions()
     answers = choices[questionID]
 
     document.getElementById("question").textContent = question
-    document.getElementById("answerA").textContent = answers[0]
-    document.getElementById("answerB").textContent = answers[1]
-    document.getElementById("answerC").textContent = answers[2]
-    document.getElementById("answerD").textContent = answers[3]
+    document.getElementById("answerA").textContent = "A - " + answers[0]
+    document.getElementById("answerB").textContent = "B - " + answers[1]
+    document.getElementById("answerC").textContent = "C - " + answers[2]
+    document.getElementById("answerD").textContent = "D - " + answers[3]
     goodAnwser = answers[4]
+    
 
 }
 function checkAnswer(chosenAnswer)
 {
-    if(document.getElementById(chosenAnswer).textContent == goodAnwser)
+    let a = document.getElementById(chosenAnswer).textContent
+    a = a.slice(4)
+    if(a == goodAnwser)
     {
         score++
         title.textContent = `Score : ${score}`
