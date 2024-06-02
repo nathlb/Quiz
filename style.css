@@ -1,0 +1,130 @@
+*{
+    background-color: #FFDE59;
+    margin: 0%;
+    padding: 0%;
+    font-family: "LXGW WenKai TC", cursive;
+}
+
+
+.page{
+    background-image: url("img/StarBackground.png");
+    background-size: 100px;
+    animation: moving 180s linear infinite;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.title {
+    margin-top: 100px;
+    margin-right: 10%;
+    margin-left: 10%;
+    text-align: center;
+    background-color: aliceblue;
+    padding: 30px;
+    border-radius: 20px;
+}
+.title > h1 {
+    background-color: aliceblue;
+    font-weight: 1000;
+}
+
+.content {
+    margin-top: 150px;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    background-color: aliceblue;
+    border-radius: 20px;
+}
+
+.content > button {
+    background-color: aliceblue;
+    width: 100%;
+    height: 70px;
+    cursor: pointer;
+    border-radius: 20px;
+    border-style: none;    
+    font-size: large;
+    font-weight: 700;
+    display: inline;
+
+    
+}
+
+.questions {
+    background: rgba(0,0,0,0);
+    display: none;
+}
+
+.questions > h4 {
+    background-color: aliceblue;
+    padding-top: 20px;
+    border-radius: 20px;
+}
+
+
+
+.questions > ul > li {
+    background-color: aliceblue;
+    list-style: none;
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 20px;
+    font-weight: 500;
+}
+
+.grid-container {
+    padding-top: 10px;
+    display: none;
+    grid-template-rows: fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    background: rgba(0,0,0,0);
+    font-weight: 1000;
+}
+
+.content > button:hover {
+    background-color: #ffbd59;
+    transition-duration: 0.7s;
+}
+
+.questionAnswer {
+    height: auto;
+    padding: 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-style: none;
+    font-weight: 1000;
+}
+
+.red {
+    background-color: #E06048;
+
+    padding: 20px
+}
+
+.purple {
+    background-color: #C678DD;
+    border-bottom-right-radius: 20px;
+}
+
+.blue {
+    background-color: #007ACC;
+
+}
+
+
+.green {
+    background-color: #16825D;
+    border-bottom-left-radius: 20px;
+}
+
+@keyframes moving {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 100% 0%;
+    }
+}

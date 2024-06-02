@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizy</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="page">
+        <div class="title" id="title">
+            <h1>Quizy</h1>
+        </div>
+        <div class="content">
+            <button onclick="startGame()" id="buttonStart">Start</button>
+            <div class="questions" id="questions">
+                <h4 id="question">Quel est la couleurs du cheval blanc de napoleon?</h4>
+                <ul>
+                    <li id="answerA">A - Blanc</li>
+                    <li id="answerB">B - Bleu</li>
+                    <li id="answerC">C - rouge</li>
+                    <li id="answerD">D - noir</li>
+                </ul>
+            </div>
+            <div class="grid-container" id="AnswerButtons">
+                <button onclick="checkAnswer('answerA')" class="red questionAnswer">A</button>
+                <button onclick="checkAnswer('answerB')" class="blue questionAnswer">B</button>
+                <button onclick="checkAnswer('answerC')" class="green questionAnswer">C</button>
+                <button onclick="checkAnswer('answerD')" class="purple questionAnswer">D</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
